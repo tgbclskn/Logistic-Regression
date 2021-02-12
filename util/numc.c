@@ -17,11 +17,13 @@ static Matrix init_matrix(size_t rows, size_t cols) {
 Matrix create_matrix(size_t rows, size_t cols, const double *data) {
     Matrix matrix;
     double **x;
+    int counter = 0;
     x = malloc(rows * sizeof *x);
     for (int i = 0; i < rows; i++) {
         x[i] = malloc(cols * sizeof *x[i]);
         for (int j = 0; j < cols; j++) {
-            x[i][j] = *(data + i + j);
+            x[i][j] = *(data + counter);
+            counter++;
         }
     }
     matrix.data = x;
@@ -75,15 +77,29 @@ double mean(Matrix A) {
     return sum / num_elements;
 }
 
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "ArgumentSelectionDefects"
+Matrix transpose(Matrix A) {
+    Matrix T = init_matrix(A.cols, A.rows);
+    for (int i = 0; i < A.cols; i++) {
+        for (int j = 0; j < A.rows; ++j) {
+            T.data[i][j] = A.data[j][i];
+        }
+    }
+    T.rows = A.cols;
+    T.cols = A.rows;
+    return T;
+}
+#pragma clang diagnostic pop
 
-void mat_mul(
-        double **result,
-        double **A,
-        double **B,
-        size_t row_a,
-        size_t col_a,
-        size_t row_b,
-        size_t col_b
-) {
-
+Matrix mat_mul(Matrix A, Matrix B) {
+    Matrix M = init_matrix(A.rows, B.cols);
+    for (int i = 0; i < A.rows; i++) {
+        for (int j = 0; j < A.cols; ++j) {
+            for(int k = 0; k < B.rows; k++) {
+                M.data[i][j] += A.data[i][k] * B.data[k][j];
+            }
+        }
+    }
+    return M;
 }

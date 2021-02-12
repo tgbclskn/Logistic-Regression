@@ -18,14 +18,8 @@ Matrix ones(size_t rows, size_t cols);
 double sum(Matrix A);
 double mean(Matrix A);
 
-void mat_mul(
-        double **result,
-        double **A,
-        double **B,
-        size_t row_a,
-        size_t col_a,
-        size_t row_b,
-        size_t col_b
-);
+Matrix transpose(Matrix A);
+Matrix mat_mul(Matrix A, Matrix B);
+
 
 #endif //LOGISTICREGRESSION_NUMC_H
