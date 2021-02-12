@@ -1,4 +1,5 @@
 #include "numc.h"
+#include <math.h>
 
 //----------------------- Matrix Implementation ----------------------//
 static Matrix init_matrix(size_t rows, size_t cols) {
@@ -77,6 +78,19 @@ double mean(Matrix A) {
     return sum / num_elements;
 }
 
+//---------------------- STD ---------------------//
+double std(Matrix A) {
+    double sum = 0.0;
+    double num_elements = (double) (A.rows * A.cols);
+    for (int i = 0; i < A.rows; i++) {
+        for (int j = 0; j < A.cols; ++j) {
+            sum += pow(A.data[i][j] - mean(A), 2);
+        }
+    }
+    return sqrt(sum / (num_elements - 1));
+}
+
+//-------------------------- Transpose -------------------------//
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "ArgumentSelectionDefects"
 Matrix transpose(Matrix A) {
@@ -92,7 +106,42 @@ Matrix transpose(Matrix A) {
 }
 #pragma clang diagnostic pop
 
+//------------------------ Matrix Addition ------------------------//
+Matrix mat_add(Matrix A, Matrix B) {
+    if (A.rows != B.rows || A.cols != B.cols) {
+        perror("MAT_ADD_ERROR --> MATRIX DIMENSIONS MUST MATCH");
+        exit(EXIT_FAILURE);
+    }
+    Matrix M = init_matrix(A.rows, B.cols);
+    for (int i = 0; i < A.rows; i++) {
+        for (int j = 0; j < A.cols; ++j) {
+            M.data[i][j] = A.data[i][j] + B.data[i][j];
+        }
+    }
+    return M;
+}
+
+//------------------------- Matrix Subtraction --------------------------//
+Matrix mat_sub(Matrix A, Matrix B) {
+    if (A.rows != B.rows || A.cols != B.cols) {
+        perror("MAT_SUB_ERROR --> MATRIX DIMENSIONS MUST MATCH");
+        exit(EXIT_FAILURE);
+    }
+    Matrix M = init_matrix(A.rows, B.cols);
+    for (int i = 0; i < A.rows; i++) {
+        for (int j = 0; j < A.cols; ++j) {
+            M.data[i][j] = A.data[i][j] - B.data[i][j];
+        }
+    }
+    return M;
+}
+
+//---------------------- Matrix Multiplication ---------------------//
 Matrix mat_mul(Matrix A, Matrix B) {
+    if (A.rows != B.rows || A.cols != B.cols) {
+        perror("MAT_MUL_ERROR --> INCORRECT DIMENSION");
+        exit(EXIT_FAILURE);
+    }
     Matrix M = init_matrix(A.rows, B.cols);
     for (int i = 0; i < A.rows; i++) {
         for (int j = 0; j < A.cols; ++j) {
@@ -102,4 +151,30 @@ Matrix mat_mul(Matrix A, Matrix B) {
         }
     }
     return M;
+}
+
+//---------------------- Matrix Elementwise Multiplication ---------------------//
+Matrix mat_dot(Matrix A, Matrix B) {
+    if (A.rows != B.rows || A.cols != B.cols) {
+        perror("MAT_SUB_ERROR --> MATRIX DIMENSIONS MUST MATCH");
+        exit(EXIT_FAILURE);
+    }
+    Matrix M = init_matrix(A.rows, B.cols);
+    for (int i = 0; i < A.rows; i++) {
+        for (int j = 0; j < A.cols; ++j) {
+            M.data[i][j] = A.data[i][j] * B.data[i][j];
+        }
+    }
+    return M;
+}
+
+//---------------------- Matrix Power ---------------------//
+Matrix power(Matrix A, double n) {
+    Matrix P = init_matrix(A.rows, A.cols);
+    for (int i = 0; i < A.rows; i++) {
+        for (int j = 0; j < A.cols; ++j) {
+            P.data[i][j] = pow(A.data[i][j], n);
+        }
+    }
+    return P;
 }

@@ -1,8 +1,8 @@
 #ifndef LOGISTICREGRESSION_NUMC_H
 #define LOGISTICREGRESSION_NUMC_H
 
-#include "stdlib.h"
-#include "math.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 typedef struct Matrices {
     double **data;
@@ -17,9 +17,14 @@ Matrix ones(size_t rows, size_t cols);
 
 double sum(Matrix A);
 double mean(Matrix A);
+double std(Matrix A);
 
 Matrix transpose(Matrix A);
+Matrix mat_add(Matrix A, Matrix B);
+Matrix mat_sub(Matrix A, Matrix B);
 Matrix mat_mul(Matrix A, Matrix B);
+Matrix mat_dot(Matrix A, Matrix B);
+Matrix power(Matrix A, double n);
 
 
 #endif //LOGISTICREGRESSION_NUMC_H

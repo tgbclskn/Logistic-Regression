@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include "util/numc.h"
 #include "util/printer.h"
-
-
+#include <math.h>
 
 int main() {
 //    Matrix X = zeros(3, 3);
@@ -15,8 +14,8 @@ int main() {
     print_matrix(A);
     print_matrix(B);
 
-    Matrix M = mat_mul(A, B);
-    print_matrix(M);
+    double d = std(A);
+    printf("%lf", d);
 
     return 0;
 }
