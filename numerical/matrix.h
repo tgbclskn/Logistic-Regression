@@ -1,5 +1,5 @@
-#ifndef LOGISTICREGRESSION_NUMC_H
-#define LOGISTICREGRESSION_NUMC_H
+#ifndef LOGISTICREGRESSION_MATRIX_H
+#define LOGISTICREGRESSION_MATRIX_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -27,4 +27,4 @@ Matrix mat_dot(Matrix A, Matrix B);
 Matrix power(Matrix A, double n);
 
 
-#endif //LOGISTICREGRESSION_NUMC_H
+#endif //LOGISTICREGRESSION_MATRIX_H

@@ -1,4 +1,4 @@
-#include "numc.h"
+#include "matrix.h"
 #include <math.h>
 
 //----------------------- Matrix Implementation ----------------------//

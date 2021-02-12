@@ -170,32 +170,86 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogisticRegression.dir/build.make CMakeFiles/LogisticRegression.dir/main.c.s
 .PHONY : main.c.s
 
-util/numc.o: util/numc.c.o
+numerical/matrix.o: numerical/matrix.c.o
 
-.PHONY : util/numc.o
+.PHONY : numerical/matrix.o
 
 # target to build an object file
-util/numc.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogisticRegression.dir/build.make CMakeFiles/LogisticRegression.dir/util/numc.c.o
-.PHONY : util/numc.c.o
+numerical/matrix.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogisticRegression.dir/build.make CMakeFiles/LogisticRegression.dir/numerical/matrix.c.o
+.PHONY : numerical/matrix.c.o
 
-util/numc.i: util/numc.c.i
+numerical/matrix.i: numerical/matrix.c.i
 
-.PHONY : util/numc.i
+.PHONY : numerical/matrix.i
 
 # target to preprocess a source file
-util/numc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogisticRegression.dir/build.make CMakeFiles/LogisticRegression.dir/util/numc.c.i
-.PHONY : util/numc.c.i
+numerical/matrix.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogisticRegression.dir/build.make CMakeFiles/LogisticRegression.dir/numerical/matrix.c.i
+.PHONY : numerical/matrix.c.i
 
-util/numc.s: util/numc.c.s
+numerical/matrix.s: numerical/matrix.c.s
 
-.PHONY : util/numc.s
+.PHONY : numerical/matrix.s
 
 # target to generate assembly for a file
-util/numc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogisticRegression.dir/build.make CMakeFiles/LogisticRegression.dir/util/numc.c.s
-.PHONY : util/numc.c.s
+numerical/matrix.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogisticRegression.dir/build.make CMakeFiles/LogisticRegression.dir/numerical/matrix.c.s
+.PHONY : numerical/matrix.c.s
+
+preprocessing/load.o: preprocessing/load.c.o
+
+.PHONY : preprocessing/load.o
+
+# target to build an object file
+preprocessing/load.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogisticRegression.dir/build.make CMakeFiles/LogisticRegression.dir/preprocessing/load.c.o
+.PHONY : preprocessing/load.c.o
+
+preprocessing/load.i: preprocessing/load.c.i
+
+.PHONY : preprocessing/load.i
+
+# target to preprocess a source file
+preprocessing/load.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogisticRegression.dir/build.make CMakeFiles/LogisticRegression.dir/preprocessing/load.c.i
+.PHONY : preprocessing/load.c.i
+
+preprocessing/load.s: preprocessing/load.c.s
+
+.PHONY : preprocessing/load.s
+
+# target to generate assembly for a file
+preprocessing/load.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogisticRegression.dir/build.make CMakeFiles/LogisticRegression.dir/preprocessing/load.c.s
+.PHONY : preprocessing/load.c.s
+
+regression/logistic.o: regression/logistic.c.o
+
+.PHONY : regression/logistic.o
+
+# target to build an object file
+regression/logistic.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogisticRegression.dir/build.make CMakeFiles/LogisticRegression.dir/regression/logistic.c.o
+.PHONY : regression/logistic.c.o
+
+regression/logistic.i: regression/logistic.c.i
+
+.PHONY : regression/logistic.i
+
+# target to preprocess a source file
+regression/logistic.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogisticRegression.dir/build.make CMakeFiles/LogisticRegression.dir/regression/logistic.c.i
+.PHONY : regression/logistic.c.i
+
+regression/logistic.s: regression/logistic.c.s
+
+.PHONY : regression/logistic.s
+
+# target to generate assembly for a file
+regression/logistic.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogisticRegression.dir/build.make CMakeFiles/LogisticRegression.dir/regression/logistic.c.s
+.PHONY : regression/logistic.c.s
 
 util/printer.o: util/printer.c.o
 
@@ -236,9 +290,15 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... util/numc.o"
-	@echo "... util/numc.i"
-	@echo "... util/numc.s"
+	@echo "... numerical/matrix.o"
+	@echo "... numerical/matrix.i"
+	@echo "... numerical/matrix.s"
+	@echo "... preprocessing/load.o"
+	@echo "... preprocessing/load.i"
+	@echo "... preprocessing/load.s"
+	@echo "... regression/logistic.o"
+	@echo "... regression/logistic.i"
+	@echo "... regression/logistic.s"
 	@echo "... util/printer.o"
 	@echo "... util/printer.i"
 	@echo "... util/printer.s"

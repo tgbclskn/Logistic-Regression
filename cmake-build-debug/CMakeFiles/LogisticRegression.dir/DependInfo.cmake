@@ -5,7 +5,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/home/andromeda/Embedded/LogisticRegression/main.c" "/home/andromeda/Embedded/LogisticRegression/cmake-build-debug/CMakeFiles/LogisticRegression.dir/main.c.o"
-  "/home/andromeda/Embedded/LogisticRegression/util/numc.c" "/home/andromeda/Embedded/LogisticRegression/cmake-build-debug/CMakeFiles/LogisticRegression.dir/util/numc.c.o"
+  "/home/andromeda/Embedded/LogisticRegression/numerical/matrix.c" "/home/andromeda/Embedded/LogisticRegression/cmake-build-debug/CMakeFiles/LogisticRegression.dir/numerical/matrix.c.o"
+  "/home/andromeda/Embedded/LogisticRegression/preprocessing/load.c" "/home/andromeda/Embedded/LogisticRegression/cmake-build-debug/CMakeFiles/LogisticRegression.dir/preprocessing/load.c.o"
+  "/home/andromeda/Embedded/LogisticRegression/regression/logistic.c" "/home/andromeda/Embedded/LogisticRegression/cmake-build-debug/CMakeFiles/LogisticRegression.dir/regression/logistic.c.o"
   "/home/andromeda/Embedded/LogisticRegression/util/printer.c" "/home/andromeda/Embedded/LogisticRegression/cmake-build-debug/CMakeFiles/LogisticRegression.dir/util/printer.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

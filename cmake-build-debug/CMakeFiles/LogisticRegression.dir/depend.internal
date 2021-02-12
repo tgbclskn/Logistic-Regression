@@ -3,12 +3,20 @@
 
 CMakeFiles/LogisticRegression.dir/main.c.o
  /home/andromeda/Embedded/LogisticRegression/main.c
- /home/andromeda/Embedded/LogisticRegression/util/numc.h
+ /home/andromeda/Embedded/LogisticRegression/numerical/matrix.h
+ /home/andromeda/Embedded/LogisticRegression/preprocessing/load.h
  /home/andromeda/Embedded/LogisticRegression/util/printer.h
-CMakeFiles/LogisticRegression.dir/util/numc.c.o
- /home/andromeda/Embedded/LogisticRegression/util/numc.c
- /home/andromeda/Embedded/LogisticRegression/util/numc.h
+CMakeFiles/LogisticRegression.dir/numerical/matrix.c.o
+ /home/andromeda/Embedded/LogisticRegression/numerical/matrix.c
+ /home/andromeda/Embedded/LogisticRegression/numerical/matrix.h
+CMakeFiles/LogisticRegression.dir/preprocessing/load.c.o
+ /home/andromeda/Embedded/LogisticRegression/numerical/matrix.h
+ /home/andromeda/Embedded/LogisticRegression/preprocessing/load.c
+ /home/andromeda/Embedded/LogisticRegression/preprocessing/load.h
+CMakeFiles/LogisticRegression.dir/regression/logistic.c.o
+ /home/andromeda/Embedded/LogisticRegression/regression/logistic.c
+ /home/andromeda/Embedded/LogisticRegression/regression/logistic.h
 CMakeFiles/LogisticRegression.dir/util/printer.c.o
- /home/andromeda/Embedded/LogisticRegression/util/numc.h
+ /home/andromeda/Embedded/LogisticRegression/numerical/matrix.h
  /home/andromeda/Embedded/LogisticRegression/util/printer.c
  /home/andromeda/Embedded/LogisticRegression/util/printer.h

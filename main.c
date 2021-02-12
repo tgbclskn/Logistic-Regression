@@ -1,21 +1,16 @@
 #include <stdio.h>
-#include "util/numc.h"
+#include "numerical/matrix.h"
 #include "util/printer.h"
-#include <math.h>
+#include "preprocessing/load.h"
+#include <stdlib.h>
 
 int main() {
-//    Matrix X = zeros(3, 3);
-//    print_matrix(X);
 
-    double a[][3] = {{1, 2, 3}};
-    double b[][1] = {{1}, {2}, {3}};
-    Matrix A = create_matrix(1, 3, *a);
-    Matrix B = create_matrix(3, 1, *b);
-    print_matrix(A);
-    print_matrix(B);
+    Iris IrisDataset = load_iris("../dataset/Iris.csv");
+    Matrix X = IrisDataset.X;
+    Matrix y = IrisDataset.y;
 
-    double d = std(A);
-    printf("%lf", d);
+    print_matrix(X);
 
     return 0;
 }

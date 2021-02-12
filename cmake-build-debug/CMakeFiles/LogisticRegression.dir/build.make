@@ -90,18 +90,18 @@ CMakeFiles/LogisticRegression.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LogisticRegression.dir/main.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/andromeda/Embedded/LogisticRegression/main.c -o CMakeFiles/LogisticRegression.dir/main.c.s
 
-CMakeFiles/LogisticRegression.dir/util/numc.c.o: CMakeFiles/LogisticRegression.dir/flags.make
-CMakeFiles/LogisticRegression.dir/util/numc.c.o: ../util/numc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andromeda/Embedded/LogisticRegression/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/LogisticRegression.dir/util/numc.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LogisticRegression.dir/util/numc.c.o   -c /home/andromeda/Embedded/LogisticRegression/util/numc.c
+CMakeFiles/LogisticRegression.dir/numerical/matrix.c.o: CMakeFiles/LogisticRegression.dir/flags.make
+CMakeFiles/LogisticRegression.dir/numerical/matrix.c.o: ../numerical/matrix.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andromeda/Embedded/LogisticRegression/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/LogisticRegression.dir/numerical/matrix.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LogisticRegression.dir/numerical/matrix.c.o   -c /home/andromeda/Embedded/LogisticRegression/numerical/matrix.c
 
-CMakeFiles/LogisticRegression.dir/util/numc.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LogisticRegression.dir/util/numc.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/andromeda/Embedded/LogisticRegression/util/numc.c > CMakeFiles/LogisticRegression.dir/util/numc.c.i
+CMakeFiles/LogisticRegression.dir/numerical/matrix.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LogisticRegression.dir/numerical/matrix.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/andromeda/Embedded/LogisticRegression/numerical/matrix.c > CMakeFiles/LogisticRegression.dir/numerical/matrix.c.i
 
-CMakeFiles/LogisticRegression.dir/util/numc.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LogisticRegression.dir/util/numc.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/andromeda/Embedded/LogisticRegression/util/numc.c -o CMakeFiles/LogisticRegression.dir/util/numc.c.s
+CMakeFiles/LogisticRegression.dir/numerical/matrix.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LogisticRegression.dir/numerical/matrix.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/andromeda/Embedded/LogisticRegression/numerical/matrix.c -o CMakeFiles/LogisticRegression.dir/numerical/matrix.c.s
 
 CMakeFiles/LogisticRegression.dir/util/printer.c.o: CMakeFiles/LogisticRegression.dir/flags.make
 CMakeFiles/LogisticRegression.dir/util/printer.c.o: ../util/printer.c
@@ -116,21 +116,51 @@ CMakeFiles/LogisticRegression.dir/util/printer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LogisticRegression.dir/util/printer.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/andromeda/Embedded/LogisticRegression/util/printer.c -o CMakeFiles/LogisticRegression.dir/util/printer.c.s
 
+CMakeFiles/LogisticRegression.dir/regression/logistic.c.o: CMakeFiles/LogisticRegression.dir/flags.make
+CMakeFiles/LogisticRegression.dir/regression/logistic.c.o: ../regression/logistic.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andromeda/Embedded/LogisticRegression/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/LogisticRegression.dir/regression/logistic.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LogisticRegression.dir/regression/logistic.c.o   -c /home/andromeda/Embedded/LogisticRegression/regression/logistic.c
+
+CMakeFiles/LogisticRegression.dir/regression/logistic.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LogisticRegression.dir/regression/logistic.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/andromeda/Embedded/LogisticRegression/regression/logistic.c > CMakeFiles/LogisticRegression.dir/regression/logistic.c.i
+
+CMakeFiles/LogisticRegression.dir/regression/logistic.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LogisticRegression.dir/regression/logistic.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/andromeda/Embedded/LogisticRegression/regression/logistic.c -o CMakeFiles/LogisticRegression.dir/regression/logistic.c.s
+
+CMakeFiles/LogisticRegression.dir/preprocessing/load.c.o: CMakeFiles/LogisticRegression.dir/flags.make
+CMakeFiles/LogisticRegression.dir/preprocessing/load.c.o: ../preprocessing/load.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andromeda/Embedded/LogisticRegression/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/LogisticRegression.dir/preprocessing/load.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LogisticRegression.dir/preprocessing/load.c.o   -c /home/andromeda/Embedded/LogisticRegression/preprocessing/load.c
+
+CMakeFiles/LogisticRegression.dir/preprocessing/load.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LogisticRegression.dir/preprocessing/load.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/andromeda/Embedded/LogisticRegression/preprocessing/load.c > CMakeFiles/LogisticRegression.dir/preprocessing/load.c.i
+
+CMakeFiles/LogisticRegression.dir/preprocessing/load.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LogisticRegression.dir/preprocessing/load.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/andromeda/Embedded/LogisticRegression/preprocessing/load.c -o CMakeFiles/LogisticRegression.dir/preprocessing/load.c.s
+
 # Object files for target LogisticRegression
 LogisticRegression_OBJECTS = \
 "CMakeFiles/LogisticRegression.dir/main.c.o" \
-"CMakeFiles/LogisticRegression.dir/util/numc.c.o" \
-"CMakeFiles/LogisticRegression.dir/util/printer.c.o"
+"CMakeFiles/LogisticRegression.dir/numerical/matrix.c.o" \
+"CMakeFiles/LogisticRegression.dir/util/printer.c.o" \
+"CMakeFiles/LogisticRegression.dir/regression/logistic.c.o" \
+"CMakeFiles/LogisticRegression.dir/preprocessing/load.c.o"
 
 # External object files for target LogisticRegression
 LogisticRegression_EXTERNAL_OBJECTS =
 
 LogisticRegression: CMakeFiles/LogisticRegression.dir/main.c.o
-LogisticRegression: CMakeFiles/LogisticRegression.dir/util/numc.c.o
+LogisticRegression: CMakeFiles/LogisticRegression.dir/numerical/matrix.c.o
 LogisticRegression: CMakeFiles/LogisticRegression.dir/util/printer.c.o
+LogisticRegression: CMakeFiles/LogisticRegression.dir/regression/logistic.c.o
+LogisticRegression: CMakeFiles/LogisticRegression.dir/preprocessing/load.c.o
 LogisticRegression: CMakeFiles/LogisticRegression.dir/build.make
 LogisticRegression: CMakeFiles/LogisticRegression.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/andromeda/Embedded/LogisticRegression/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable LogisticRegression"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/andromeda/Embedded/LogisticRegression/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable LogisticRegression"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LogisticRegression.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

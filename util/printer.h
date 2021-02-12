@@ -6,7 +6,7 @@
 #define LOGISTICREGRESSION_PRINTER_H
 
 #include <stdio.h>
-#include "numc.h"
+#include "../numerical/matrix.h"
 
 void print_matrix(Matrix A);
 
