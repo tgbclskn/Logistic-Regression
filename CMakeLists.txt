@@ -3,4 +3,4 @@ project(LogisticRegression C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(LogisticRegression main.c)
+add_executable(LogisticRegression main.c util/numc.c util/numc.h)

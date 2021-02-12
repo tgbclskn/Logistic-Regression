@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/LogisticRegression.dir/main.c.o"
+  "CMakeFiles/LogisticRegression.dir/util/numc.c.o"
   "LogisticRegression"
   "LogisticRegression.pdb"
 )

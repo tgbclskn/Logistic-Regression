@@ -170,6 +170,33 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogisticRegression.dir/build.make CMakeFiles/LogisticRegression.dir/main.c.s
 .PHONY : main.c.s
 
+util/numc.o: util/numc.c.o
+
+.PHONY : util/numc.o
+
+# target to build an object file
+util/numc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogisticRegression.dir/build.make CMakeFiles/LogisticRegression.dir/util/numc.c.o
+.PHONY : util/numc.c.o
+
+util/numc.i: util/numc.c.i
+
+.PHONY : util/numc.i
+
+# target to preprocess a source file
+util/numc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogisticRegression.dir/build.make CMakeFiles/LogisticRegression.dir/util/numc.c.i
+.PHONY : util/numc.c.i
+
+util/numc.s: util/numc.c.s
+
+.PHONY : util/numc.s
+
+# target to generate assembly for a file
+util/numc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogisticRegression.dir/build.make CMakeFiles/LogisticRegression.dir/util/numc.c.s
+.PHONY : util/numc.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -182,6 +209,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... util/numc.o"
+	@echo "... util/numc.i"
+	@echo "... util/numc.s"
 .PHONY : help
 
 
