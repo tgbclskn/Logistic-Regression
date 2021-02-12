@@ -197,6 +197,33 @@ util/numc.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogisticRegression.dir/build.make CMakeFiles/LogisticRegression.dir/util/numc.c.s
 .PHONY : util/numc.c.s
 
+util/printer.o: util/printer.c.o
+
+.PHONY : util/printer.o
+
+# target to build an object file
+util/printer.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogisticRegression.dir/build.make CMakeFiles/LogisticRegression.dir/util/printer.c.o
+.PHONY : util/printer.c.o
+
+util/printer.i: util/printer.c.i
+
+.PHONY : util/printer.i
+
+# target to preprocess a source file
+util/printer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogisticRegression.dir/build.make CMakeFiles/LogisticRegression.dir/util/printer.c.i
+.PHONY : util/printer.c.i
+
+util/printer.s: util/printer.c.s
+
+.PHONY : util/printer.s
+
+# target to generate assembly for a file
+util/printer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogisticRegression.dir/build.make CMakeFiles/LogisticRegression.dir/util/printer.c.s
+.PHONY : util/printer.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -212,6 +239,9 @@ help:
 	@echo "... util/numc.o"
 	@echo "... util/numc.i"
 	@echo "... util/numc.s"
+	@echo "... util/printer.o"
+	@echo "... util/printer.i"
+	@echo "... util/printer.s"
 .PHONY : help
 
 

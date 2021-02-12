@@ -85,6 +85,12 @@
 		<Unit filename="/home/andromeda/Embedded/LogisticRegression/util/numc.h">
 			<Option target="LogisticRegression"/>
 		</Unit>
+		<Unit filename="/home/andromeda/Embedded/LogisticRegression/util/printer.c">
+			<Option target="LogisticRegression"/>
+		</Unit>
+		<Unit filename="/home/andromeda/Embedded/LogisticRegression/util/printer.h">
+			<Option target="LogisticRegression"/>
+		</Unit>
 		<Unit filename="/home/andromeda/Embedded/LogisticRegression/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

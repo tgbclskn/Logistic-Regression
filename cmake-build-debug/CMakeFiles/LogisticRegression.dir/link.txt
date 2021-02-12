@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/LogisticRegression.dir/main.c.o CMakeFiles/LogisticRegression.dir/util/numc.c.o  -o LogisticRegression 
+/usr/bin/cc -g   CMakeFiles/LogisticRegression.dir/main.c.o CMakeFiles/LogisticRegression.dir/util/numc.c.o CMakeFiles/LogisticRegression.dir/util/printer.c.o  -o LogisticRegression 

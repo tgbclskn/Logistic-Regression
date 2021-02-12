@@ -2,6 +2,7 @@
 #define LOGISTICREGRESSION_NUMC_H
 
 #include "stdlib.h"
+#include "math.h"
 
 typedef struct Matrices {
     double **data;
@@ -9,7 +10,13 @@ typedef struct Matrices {
     size_t cols;
 } Matrix;
 
+Matrix create_matrix(size_t rows, size_t cols, const double *data);
+
 Matrix zeros(size_t rows, size_t cols);
+Matrix ones(size_t rows, size_t cols);
+
+double sum(Matrix A);
+double mean(Matrix A);
 
 void mat_mul(
         double **result,

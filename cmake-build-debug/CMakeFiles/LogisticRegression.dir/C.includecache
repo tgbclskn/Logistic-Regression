@@ -11,14 +11,18 @@ stdio.h
 -
 util/numc.h
 /home/andromeda/Embedded/LogisticRegression/util/numc.h
-
-/home/andromeda/Embedded/LogisticRegression/util/numc.c
-stdio.h
--
-numc.h
-/home/andromeda/Embedded/LogisticRegression/util/numc.h
+util/printer.h
+/home/andromeda/Embedded/LogisticRegression/util/printer.h
 
 /home/andromeda/Embedded/LogisticRegression/util/numc.h
 stdlib.h
 /home/andromeda/Embedded/LogisticRegression/util/stdlib.h
+math.h
+/home/andromeda/Embedded/LogisticRegression/util/math.h
+
+/home/andromeda/Embedded/LogisticRegression/util/printer.h
+stdio.h
+-
+numc.h
+/home/andromeda/Embedded/LogisticRegression/util/numc.h
 

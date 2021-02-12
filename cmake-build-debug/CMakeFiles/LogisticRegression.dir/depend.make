@@ -3,7 +3,12 @@
 
 CMakeFiles/LogisticRegression.dir/main.c.o: ../main.c
 CMakeFiles/LogisticRegression.dir/main.c.o: ../util/numc.h
+CMakeFiles/LogisticRegression.dir/main.c.o: ../util/printer.h
 
 CMakeFiles/LogisticRegression.dir/util/numc.c.o: ../util/numc.c
 CMakeFiles/LogisticRegression.dir/util/numc.c.o: ../util/numc.h
+
+CMakeFiles/LogisticRegression.dir/util/printer.c.o: ../util/numc.h
+CMakeFiles/LogisticRegression.dir/util/printer.c.o: ../util/printer.c
+CMakeFiles/LogisticRegression.dir/util/printer.c.o: ../util/printer.h
 

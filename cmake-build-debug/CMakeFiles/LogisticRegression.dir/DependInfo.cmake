@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/home/andromeda/Embedded/LogisticRegression/main.c" "/home/andromeda/Embedded/LogisticRegression/cmake-build-debug/CMakeFiles/LogisticRegression.dir/main.c.o"
   "/home/andromeda/Embedded/LogisticRegression/util/numc.c" "/home/andromeda/Embedded/LogisticRegression/cmake-build-debug/CMakeFiles/LogisticRegression.dir/util/numc.c.o"
+  "/home/andromeda/Embedded/LogisticRegression/util/printer.c" "/home/andromeda/Embedded/LogisticRegression/cmake-build-debug/CMakeFiles/LogisticRegression.dir/util/printer.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

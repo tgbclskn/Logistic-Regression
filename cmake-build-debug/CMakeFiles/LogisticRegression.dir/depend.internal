@@ -4,6 +4,11 @@
 CMakeFiles/LogisticRegression.dir/main.c.o
  /home/andromeda/Embedded/LogisticRegression/main.c
  /home/andromeda/Embedded/LogisticRegression/util/numc.h
+ /home/andromeda/Embedded/LogisticRegression/util/printer.h
 CMakeFiles/LogisticRegression.dir/util/numc.c.o
  /home/andromeda/Embedded/LogisticRegression/util/numc.c
  /home/andromeda/Embedded/LogisticRegression/util/numc.h
+CMakeFiles/LogisticRegression.dir/util/printer.c.o
+ /home/andromeda/Embedded/LogisticRegression/util/numc.h
+ /home/andromeda/Embedded/LogisticRegression/util/printer.c
+ /home/andromeda/Embedded/LogisticRegression/util/printer.h
