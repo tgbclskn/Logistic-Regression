@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/andromeda/Embedded/LogisticRegression/main.c
+stdio.h
+-
+util/numc.h
+/home/andromeda/Embedded/LogisticRegression/util/numc.h
+
+/home/andromeda/Embedded/LogisticRegression/util/numc.c
+stdio.h
+-
+numc.h
+/home/andromeda/Embedded/LogisticRegression/util/numc.h
+
+/home/andromeda/Embedded/LogisticRegression/util/numc.h
+stdlib.h
+/home/andromeda/Embedded/LogisticRegression/util/stdlib.h
+
