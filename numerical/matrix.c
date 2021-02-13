@@ -143,9 +143,9 @@ Matrix mat_mul(Matrix A, Matrix B) {
     }
     Matrix M = init_matrix(A.rows, B.cols);
     for (size_t i = 0; i < A.rows; i++) {
-        for (size_t j = 0; j < A.cols; ++j) {
+        for (size_t j = 0; j < B.cols; ++j) {
             for(size_t k = 0; k < B.rows; k++) {
-                M.data[i][j] += A.data[i][k] * B.data[k][j];
+                M.data[i][j] += (A.data[i][k] * B.data[k][j]);
             }
         }
     }

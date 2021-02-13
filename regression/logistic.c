@@ -42,13 +42,16 @@ Matrix predict(Model model, Matrix X) {
     Matrix Z = mat_mul(X, model.W);
     Matrix A = sigmoid(Z);
 
-    for (size_t i = 0; i < X.rows; i++) {
+    print_matrix(A);
+
+    for (size_t i = 0; i < A.rows; i++) {
         if (A.data[i][0] >= 0.5) {
             Y.data[i][0] = 1;
         } else {
             Y.data[i][0] = 0;
         }
     }
+
     return Y;
 }
 

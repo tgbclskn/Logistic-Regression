@@ -11,8 +11,6 @@ stdio.h
 -
 numerical/matrix.h
 /home/andromeda/Embedded/LogisticRegression/numerical/matrix.h
-util/printer.h
-/home/andromeda/Embedded/LogisticRegression/util/printer.h
 preprocessing/load.h
 /home/andromeda/Embedded/LogisticRegression/preprocessing/load.h
 preprocessing/split.h
@@ -47,10 +45,6 @@ math.h
 /home/andromeda/Embedded/LogisticRegression/preprocessing/split.h
 ../numerical/matrix.h
 /home/andromeda/Embedded/LogisticRegression/numerical/matrix.h
-
-/home/andromeda/Embedded/LogisticRegression/regression/logistic.c
-logistic.h
-/home/andromeda/Embedded/LogisticRegression/regression/logistic.h
 
 /home/andromeda/Embedded/LogisticRegression/regression/logistic.h
 ../numerical/matrix.h
