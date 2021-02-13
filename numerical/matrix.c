@@ -172,7 +172,7 @@ Matrix mat_dot(Matrix A, Matrix B) {
 }
 
 //-------------------- Scalar Multiplication -------------------//
-Matrix multiply(Matrix A, double n) {
+Matrix scalar_multiply(Matrix A, double n) {
     Matrix M = init_matrix(A.rows, A.cols);
     for (size_t i = 0; i < A.rows; i++) {
         for (size_t j = 0; j < A.cols; ++j) {
@@ -183,7 +183,7 @@ Matrix multiply(Matrix A, double n) {
 }
 
 //-------------------- Scalar division -------------------//
-Matrix divide(Matrix A, double n) {
+Matrix scalar_divide(Matrix A, double n) {
     Matrix D = init_matrix(A.rows, A.cols);
     for (size_t i = 0; i < A.rows; i++) {
         for (size_t j = 0; j < A.cols; ++j) {
@@ -194,7 +194,7 @@ Matrix divide(Matrix A, double n) {
 }
 
 //---------------------- Matrix Power ---------------------//
-Matrix power(Matrix A, double n) {
+Matrix mat_power(Matrix A, double n) {
     Matrix P = init_matrix(A.rows, A.cols);
     for (size_t i = 0; i < A.rows; i++) {
         for (size_t j = 0; j < A.cols; ++j) {
@@ -204,12 +204,34 @@ Matrix power(Matrix A, double n) {
     return P;
 }
 
+//---------------------- Matrix Log ---------------------//
+Matrix mat_log(Matrix A) {
+    Matrix L = init_matrix(A.rows, A.cols);
+    for (size_t i = 0; i < A.rows; i++) {
+        for (size_t j = 0; j < A.cols; ++j) {
+            L.data[i][j] = log(A.data[i][j]);
+        }
+    }
+    return L;
+}
+
 //------------------------- Sigmoid -----------------------//
 Matrix sigmoid(Matrix A) {
     Matrix S = init_matrix(A.rows, A.cols);
     for (size_t i = 0; i < A.rows; i++) {
         for (size_t j = 0; j < A.cols; ++j) {
             S.data[i][j] = 1 / (1 + exp(-A.data[i][j]));
+        }
+    }
+    return S;
+}
+
+//---------------------- Sub from scalar -------------------//
+Matrix sub_from_scalar(double n, Matrix A) {
+    Matrix S = init_matrix(A.rows, A.cols);
+    for (size_t i = 0; i < A.rows; i++) {
+        for (size_t j = 0; j < A.cols; ++j) {
+            S.data[i][j] = n - A.data[i][j];
         }
     }
     return S;

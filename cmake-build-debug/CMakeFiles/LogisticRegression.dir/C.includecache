@@ -7,8 +7,6 @@
 #IncludeRegexTransform: 
 
 /home/andromeda/Embedded/LogisticRegression/main.c
-stdio.h
--
 numerical/matrix.h
 /home/andromeda/Embedded/LogisticRegression/numerical/matrix.h
 preprocessing/load.h

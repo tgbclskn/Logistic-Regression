@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "numerical/matrix.h"
 #include "preprocessing/load.h"
 #include "preprocessing/split.h"
@@ -19,13 +18,10 @@ int main() {
     dispose(X);
     dispose(y);
 
-    LogisticRegression lr = {0.05, 100};
+    LogisticRegression lr = {0.05, 20};
     Model trained_model = fit(lr, TrainX, TrainY);
     Matrix Y_hat = predict(trained_model, TestX);
-
-    double accuracy = get_accuracy(TestY, Y_hat);
-
-    printf("%lf", accuracy);
+    get_accuracy(TestY, Y_hat);
 
     return 0;
 }

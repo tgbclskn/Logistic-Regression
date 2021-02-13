@@ -24,10 +24,12 @@ Matrix mat_add(Matrix A, Matrix B);
 Matrix mat_sub(Matrix A, Matrix B);
 Matrix mat_mul(Matrix A, Matrix B);
 Matrix mat_dot(Matrix A, Matrix B);
-Matrix multiply(Matrix A, double n);
-Matrix divide(Matrix A, double n);
-Matrix power(Matrix A, double n);
+Matrix scalar_multiply(Matrix A, double n);
+Matrix scalar_divide(Matrix A, double n);
+Matrix mat_power(Matrix A, double n);
+Matrix mat_log(Matrix A);
 Matrix sigmoid(Matrix A);
+Matrix sub_from_scalar(double n, Matrix A);
 void shuffle(Matrix X);
 
 void dispose(Matrix A);

@@ -22,6 +22,7 @@ static Matrix get_y(Matrix dataset) {
 }
 
 Iris load_iris(char *path) {
+    printf("loading data from %s...\n", path);
     FILE *stream = fopen(path, "r");
     if (stream == NULL) {
         perror("ERROR OPENING THE FILE");
@@ -44,13 +45,13 @@ Iris load_iris(char *path) {
         }
         i++;
     }
-
+    printf("number of training examples... ( %lu )\n", i);
     fclose(stream);
+    printf("shuffling the dataset...\n");
 
     ////////////////////
     shuffle(dataset);
     ////////////////////
-
     Iris IrisData = {
             get_x(dataset),
             get_y(dataset)
