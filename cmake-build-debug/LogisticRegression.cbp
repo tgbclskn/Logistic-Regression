@@ -91,6 +91,12 @@
 		<Unit filename="/home/andromeda/Embedded/LogisticRegression/preprocessing/load.h">
 			<Option target="LogisticRegression"/>
 		</Unit>
+		<Unit filename="/home/andromeda/Embedded/LogisticRegression/preprocessing/scaler.c">
+			<Option target="LogisticRegression"/>
+		</Unit>
+		<Unit filename="/home/andromeda/Embedded/LogisticRegression/preprocessing/scaler.h">
+			<Option target="LogisticRegression"/>
+		</Unit>
 		<Unit filename="/home/andromeda/Embedded/LogisticRegression/preprocessing/split.c">
 			<Option target="LogisticRegression"/>
 		</Unit>

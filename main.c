@@ -29,7 +29,7 @@ int main() {
 //    print_matrix(E);
 
     LogisticRegression lr = {
-            0.1, 1
+            0.009, 100
     };
 
     fit(lr, X, Y);

@@ -12,18 +12,14 @@ stdio.h
 stdlib.h
 -
 
-/home/andromeda/Embedded/LogisticRegression/regression/logistic.c
-logistic.h
-/home/andromeda/Embedded/LogisticRegression/regression/logistic.h
+/home/andromeda/Embedded/LogisticRegression/preprocessing/scaler.c
+scaler.h
+/home/andromeda/Embedded/LogisticRegression/preprocessing/scaler.h
 
-/home/andromeda/Embedded/LogisticRegression/regression/logistic.h
-../numerical/matrix.h
-/home/andromeda/Embedded/LogisticRegression/numerical/matrix.h
-../util/printer.h
-/home/andromeda/Embedded/LogisticRegression/util/printer.h
-
-/home/andromeda/Embedded/LogisticRegression/util/printer.h
-stdio.h
+/home/andromeda/Embedded/LogisticRegression/preprocessing/scaler.h
+stdlib.h
+-
+math.h
 -
 ../numerical/matrix.h
 /home/andromeda/Embedded/LogisticRegression/numerical/matrix.h
