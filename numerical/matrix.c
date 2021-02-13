@@ -138,7 +138,7 @@ Matrix mat_sub(Matrix A, Matrix B) {
 
 //---------------------- Matrix Multiplication ---------------------//
 Matrix mat_mul(Matrix A, Matrix B) {
-    if (A.rows != B.rows || A.cols != B.cols) {
+    if (A.cols != B.rows) {
         perror("MAT_MUL_ERROR --> INCORRECT DIMENSION");
         exit(EXIT_FAILURE);
     }
@@ -155,17 +155,43 @@ Matrix mat_mul(Matrix A, Matrix B) {
 
 //---------------------- Matrix Elementwise Multiplication ---------------------//
 Matrix mat_dot(Matrix A, Matrix B) {
-    if (A.rows != B.rows || A.cols != B.cols) {
-        perror("MAT_SUB_ERROR --> MATRIX DIMENSIONS MUST MATCH");
+    if (A.rows != B.rows) {
+        perror("MAT_DOT_ERROR --> MATRIX DIMENSIONS MUST MATCH");
         exit(EXIT_FAILURE);
     }
     Matrix M = init_matrix(A.rows, B.cols);
     for (size_t i = 0; i < A.rows; i++) {
         for (size_t j = 0; j < A.cols; ++j) {
-            M.data[i][j] = A.data[i][j] * B.data[i][j];
+            if (B.cols == 1) {
+                M.data[i][j] = A.data[i][j] * B.data[i][0];
+            } else {
+                M.data[i][j] = A.data[i][j] * B.data[i][j];
+            }
         }
     }
     return M;
+}
+
+//-------------------- Scalar Multiplication -------------------//
+Matrix multiply(Matrix A, double n) {
+    Matrix D = init_matrix(A.rows, A.cols);
+    for (size_t i = 0; i < A.rows; i++) {
+        for (size_t j = 0; j < A.cols; ++j) {
+            D.data[i][j] = A.data[i][j] * n;
+        }
+    }
+    return D;
+}
+
+//-------------------- Scalar division -------------------//
+Matrix divide(Matrix A, double n) {
+    Matrix D = init_matrix(A.rows, A.cols);
+    for (size_t i = 0; i < A.rows; i++) {
+        for (size_t j = 0; j < A.cols; ++j) {
+            D.data[i][j] = A.data[i][j] / n;
+        }
+    }
+    return D;
 }
 
 //---------------------- Matrix Power ---------------------//
@@ -200,4 +226,12 @@ void shuffle(Matrix X) {
             X.data[i][j] = temp;
         }
     }
+}
+
+//--------------------- Dispose -------------------//
+void dispose(Matrix A) {
+    for (size_t i = 0; i < A.rows; i ++) {
+        free(A.data[i]);
+    }
+    free(A.data);
 }

@@ -24,9 +24,13 @@ Matrix mat_add(Matrix A, Matrix B);
 Matrix mat_sub(Matrix A, Matrix B);
 Matrix mat_mul(Matrix A, Matrix B);
 Matrix mat_dot(Matrix A, Matrix B);
+Matrix multiply(Matrix A, double n);
+Matrix divide(Matrix A, double n);
 Matrix power(Matrix A, double n);
 Matrix sigmoid(Matrix A);
 void shuffle(Matrix X);
+
+void dispose(Matrix A);
 
 
 #endif //LOGISTICREGRESSION_MATRIX_H

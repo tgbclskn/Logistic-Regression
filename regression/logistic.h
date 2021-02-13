@@ -2,11 +2,13 @@
 #define LOGISTICREGRESSION_LOGISTIC_H
 
 #include "../numerical/matrix.h"
+#include "../util/printer.h"
 
 typedef struct Regression {
-    Matrix W;
-    Matrix b;
     double learning_rate;
+    size_t iterations;
 } LogisticRegression;
+
+void fit(LogisticRegression lr, Matrix X, Matrix y);
 
 #endif //LOGISTICREGRESSION_LOGISTIC_H
