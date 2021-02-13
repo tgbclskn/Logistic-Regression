@@ -179,6 +179,17 @@ Matrix power(Matrix A, double n) {
     return P;
 }
 
+//------------------------- Sigmoid -----------------------//
+Matrix sigmoid(Matrix A) {
+    Matrix S = init_matrix(A.rows, A.cols);
+    for (size_t i = 0; i < A.rows; i++) {
+        for (size_t j = 0; j < A.cols; ++j) {
+            S.data[i][j] = 1 / (1 + exp(-A.data[i][j]));
+        }
+    }
+    return S;
+}
+
 //---------------------- Matrix Shuffle -------------------//
 void shuffle(Matrix X) {
     for (size_t i = 0; i < X.rows; i++) {
