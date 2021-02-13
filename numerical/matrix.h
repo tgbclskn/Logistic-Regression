@@ -25,6 +25,7 @@ Matrix mat_sub(Matrix A, Matrix B);
 Matrix mat_mul(Matrix A, Matrix B);
 Matrix mat_dot(Matrix A, Matrix B);
 Matrix power(Matrix A, double n);
+void shuffle(Matrix X);
 
 
 #endif //LOGISTICREGRESSION_MATRIX_H

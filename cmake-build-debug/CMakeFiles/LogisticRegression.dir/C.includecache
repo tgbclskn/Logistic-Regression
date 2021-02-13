@@ -12,15 +12,11 @@ stdio.h
 stdlib.h
 -
 
-/home/andromeda/Embedded/LogisticRegression/preprocessing/load.c
-load.h
-/home/andromeda/Embedded/LogisticRegression/preprocessing/load.h
+/home/andromeda/Embedded/LogisticRegression/preprocessing/split.c
+split.h
+/home/andromeda/Embedded/LogisticRegression/preprocessing/split.h
 
-/home/andromeda/Embedded/LogisticRegression/preprocessing/load.h
+/home/andromeda/Embedded/LogisticRegression/preprocessing/split.h
 ../numerical/matrix.h
 /home/andromeda/Embedded/LogisticRegression/numerical/matrix.h
-string.h
--
-errno.h
--
 

@@ -13,6 +13,10 @@ CMakeFiles/LogisticRegression.dir/preprocessing/load.c.o
  /home/andromeda/Embedded/LogisticRegression/numerical/matrix.h
  /home/andromeda/Embedded/LogisticRegression/preprocessing/load.c
  /home/andromeda/Embedded/LogisticRegression/preprocessing/load.h
+CMakeFiles/LogisticRegression.dir/preprocessing/split.c.o
+ /home/andromeda/Embedded/LogisticRegression/numerical/matrix.h
+ /home/andromeda/Embedded/LogisticRegression/preprocessing/split.c
+ /home/andromeda/Embedded/LogisticRegression/preprocessing/split.h
 CMakeFiles/LogisticRegression.dir/regression/logistic.c.o
  /home/andromeda/Embedded/LogisticRegression/regression/logistic.c
  /home/andromeda/Embedded/LogisticRegression/regression/logistic.h

@@ -180,11 +180,13 @@ Matrix power(Matrix A, double n) {
 }
 
 //---------------------- Matrix Shuffle -------------------//
-Matrix shuffle(Matrix X) {
+void shuffle(Matrix X) {
     for (size_t i = 0; i < X.rows; i++) {
+        size_t r = i + rand() / (RAND_MAX / (X.rows - i) + 1);
         for (size_t j = 0; j < X.cols; ++j) {
-            size_t r = i + rand() / (RAND_MAX / (X.rows - i) + 1);
-
+            double temp = X.data[r][j];
+            X.data[r][j] = X.data[i][j];
+            X.data[i][j] = temp;
         }
     }
 }
