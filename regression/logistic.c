@@ -12,8 +12,9 @@ Model fit(LogisticRegression lr, Matrix X, Matrix y) {
     for (size_t i = 0; i < lr.iterations; i++) {
         Matrix Z = mat_mul(X, W);
         Matrix A = sigmoid(Z);
+        Matrix E = mat_sub(A, y);
 
-        Matrix dW = divide(mat_mul(transpose(X), mat_sub(A, y)), m);
+        Matrix dW = divide(mat_mul(transpose(X), E), m);
         Matrix dB = zeros(1, 1);
         double temp = sum(mat_sub(A, y)) / m;
         dB.data[0][0] = temp;
@@ -23,6 +24,7 @@ Model fit(LogisticRegression lr, Matrix X, Matrix y) {
 
         dispose(Z);
         dispose(A);
+        dispose(E);
         dispose(dW);
         dispose(dB);
     }

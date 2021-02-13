@@ -1,6 +1,6 @@
 #include "load.h"
 
-#define IRIS_TRAINING_EXAMPLES 150
+#define IRIS_TRAINING_EXAMPLES 100
 #define IRIS_FEATURES 4
 
 static Matrix get_x(Matrix dataset) {
@@ -55,6 +55,8 @@ Iris load_iris(char *path) {
             get_x(dataset),
             get_y(dataset)
     };
+
+    dispose(dataset);
 
     return IrisData;
 }

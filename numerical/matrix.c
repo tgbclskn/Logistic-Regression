@@ -91,20 +91,19 @@ double std(Matrix A) {
 }
 
 //-------------------------- Transpose -------------------------//
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "ArgumentSelectionDefects"
 Matrix transpose(Matrix A) {
-    Matrix T = init_matrix(A.cols, A.rows);
+    size_t new_rows = A.cols;
+    size_t new_cols = A.rows;
+    Matrix T = init_matrix(new_rows, new_cols);
     for (size_t i = 0; i < A.cols; i++) {
         for (size_t j = 0; j < A.rows; ++j) {
             T.data[i][j] = A.data[j][i];
         }
     }
-    T.rows = A.cols;
-    T.cols = A.rows;
+    T.rows = new_rows;
+    T.cols = new_cols;
     return T;
 }
-#pragma clang diagnostic pop
 
 //------------------------ Matrix Addition ------------------------//
 Matrix mat_add(Matrix A, Matrix B) {
@@ -174,13 +173,13 @@ Matrix mat_dot(Matrix A, Matrix B) {
 
 //-------------------- Scalar Multiplication -------------------//
 Matrix multiply(Matrix A, double n) {
-    Matrix D = init_matrix(A.rows, A.cols);
+    Matrix M = init_matrix(A.rows, A.cols);
     for (size_t i = 0; i < A.rows; i++) {
         for (size_t j = 0; j < A.cols; ++j) {
-            D.data[i][j] = A.data[i][j] * n;
+            M.data[i][j] = A.data[i][j] * n;
         }
     }
-    return D;
+    return M;
 }
 
 //-------------------- Scalar division -------------------//
