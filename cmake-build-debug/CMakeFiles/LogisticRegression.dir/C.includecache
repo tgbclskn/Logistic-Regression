@@ -6,17 +6,37 @@
 
 #IncludeRegexTransform: 
 
+/home/andromeda/Embedded/LogisticRegression/main.c
+stdio.h
+-
+numerical/matrix.h
+/home/andromeda/Embedded/LogisticRegression/numerical/matrix.h
+util/printer.h
+/home/andromeda/Embedded/LogisticRegression/util/printer.h
+preprocessing/load.h
+/home/andromeda/Embedded/LogisticRegression/preprocessing/load.h
+stdlib.h
+-
+
 /home/andromeda/Embedded/LogisticRegression/numerical/matrix.h
 stdio.h
 -
 stdlib.h
 -
 
-/home/andromeda/Embedded/LogisticRegression/preprocessing/split.c
-split.h
-/home/andromeda/Embedded/LogisticRegression/preprocessing/split.h
+/home/andromeda/Embedded/LogisticRegression/preprocessing/load.h
+../numerical/matrix.h
+/home/andromeda/Embedded/LogisticRegression/numerical/matrix.h
+../util/printer.h
+/home/andromeda/Embedded/LogisticRegression/util/printer.h
+string.h
+-
+errno.h
+-
 
-/home/andromeda/Embedded/LogisticRegression/preprocessing/split.h
+/home/andromeda/Embedded/LogisticRegression/util/printer.h
+stdio.h
+-
 ../numerical/matrix.h
 /home/andromeda/Embedded/LogisticRegression/numerical/matrix.h
 

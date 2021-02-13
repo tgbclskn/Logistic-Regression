@@ -2,6 +2,7 @@
 #define LOGISTICREGRESSION_LOAD_H
 
 #include "../numerical/matrix.h"
+#include "../util/printer.h"
 #include <string.h>
 #include <errno.h>
 

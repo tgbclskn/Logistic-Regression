@@ -32,9 +32,10 @@ Iris load_iris(char *path) {
     Matrix dataset = zeros(IRIS_TRAINING_EXAMPLES, IRIS_FEATURES + 1);
 
     char line[1024];
-    int i = 0, j = 0;
+    size_t i = 0;
     while (fgets(line, 1024, stream)) {
         char *token = strtok(line, ",");
+        size_t j = 0;
         while (token != NULL) {
             double x = (double) strtof(token, (char **) NULL);
             dataset.data[i][j] = x;
@@ -45,6 +46,10 @@ Iris load_iris(char *path) {
     }
 
     fclose(stream);
+
+    ////////////////////
+    shuffle(dataset);
+    ////////////////////
 
     Iris IrisData = {
             get_x(dataset),
