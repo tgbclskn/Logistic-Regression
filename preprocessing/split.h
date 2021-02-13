@@ -10,4 +10,6 @@ typedef struct Split {
     Matrix TestY;
 } TrainTestSplit;
 
+TrainTestSplit split_train_test(Matrix X, Matrix y, float test_percentage);
+
 #endif //LOGISTICREGRESSION_SPLIT_H

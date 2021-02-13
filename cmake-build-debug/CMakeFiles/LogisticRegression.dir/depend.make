@@ -4,6 +4,7 @@
 CMakeFiles/LogisticRegression.dir/main.c.o: ../main.c
 CMakeFiles/LogisticRegression.dir/main.c.o: ../numerical/matrix.h
 CMakeFiles/LogisticRegression.dir/main.c.o: ../preprocessing/load.h
+CMakeFiles/LogisticRegression.dir/main.c.o: ../preprocessing/split.h
 CMakeFiles/LogisticRegression.dir/main.c.o: ../util/printer.h
 
 CMakeFiles/LogisticRegression.dir/numerical/matrix.c.o: ../numerical/matrix.c
