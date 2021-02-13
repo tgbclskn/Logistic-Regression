@@ -6,7 +6,7 @@ static Matrix init_matrix(size_t rows, size_t cols) {
     Matrix matrix;
     double **x;
     x = malloc(rows * sizeof *x);
-    for (int i = 0; i < rows; i++) {
+    for (size_t i = 0; i < rows; i++) {
         x[i] = malloc(cols * sizeof *x[i]);
     }
     matrix.data = x;
@@ -18,11 +18,11 @@ static Matrix init_matrix(size_t rows, size_t cols) {
 Matrix create_matrix(size_t rows, size_t cols, const double *data) {
     Matrix matrix;
     double **x;
-    int counter = 0;
+    size_t counter = 0;
     x = malloc(rows * sizeof *x);
-    for (int i = 0; i < rows; i++) {
+    for (size_t i = 0; i < rows; i++) {
         x[i] = malloc(cols * sizeof *x[i]);
-        for (int j = 0; j < cols; j++) {
+        for (size_t j = 0; j < cols; j++) {
             x[i][j] = *(data + counter);
             counter++;
         }
@@ -36,8 +36,8 @@ Matrix create_matrix(size_t rows, size_t cols, const double *data) {
 //-------------------- Zeros ----------------------//
 Matrix zeros(size_t rows, size_t cols) {
     Matrix x = init_matrix(rows, cols);
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < cols; j++) {
+    for (size_t i = 0; i < rows; i++) {
+        for (size_t j = 0; j < cols; j++) {
             x.data[i][j] = 0.0;
         }
     }
@@ -47,8 +47,8 @@ Matrix zeros(size_t rows, size_t cols) {
 //------------------ Ones ---------------------//
 Matrix ones(size_t rows, size_t cols) {
     Matrix x = init_matrix(rows, cols);
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < cols; j++) {
+    for (size_t i = 0; i < rows; i++) {
+        for (size_t j = 0; j < cols; j++) {
             x.data[i][j] = 1.0;
         }
     }
@@ -58,8 +58,8 @@ Matrix ones(size_t rows, size_t cols) {
 //-------------------- Sum ---------------------//
 double sum(Matrix A) {
     double sum = 0.0;
-    for (int i = 0; i < A.rows; i++) {
-        for (int j = 0; j < A.cols; ++j) {
+    for (size_t i = 0; i < A.rows; i++) {
+        for (size_t j = 0; j < A.cols; ++j) {
             sum += A.data[i][j];
         }
     }
@@ -70,8 +70,8 @@ double sum(Matrix A) {
 double mean(Matrix A) {
     double sum = 0.0;
     double num_elements = (double) (A.rows * A.cols);
-    for (int i = 0; i < A.rows; i++) {
-        for (int j = 0; j < A.cols; ++j) {
+    for (size_t i = 0; i < A.rows; i++) {
+        for (size_t j = 0; j < A.cols; ++j) {
             sum += A.data[i][j];
         }
     }
@@ -82,8 +82,8 @@ double mean(Matrix A) {
 double std(Matrix A) {
     double sum = 0.0;
     double num_elements = (double) (A.rows * A.cols);
-    for (int i = 0; i < A.rows; i++) {
-        for (int j = 0; j < A.cols; ++j) {
+    for (size_t i = 0; i < A.rows; i++) {
+        for (size_t j = 0; j < A.cols; ++j) {
             sum += pow(A.data[i][j] - mean(A), 2);
         }
     }
@@ -95,8 +95,8 @@ double std(Matrix A) {
 #pragma ide diagnostic ignored "ArgumentSelectionDefects"
 Matrix transpose(Matrix A) {
     Matrix T = init_matrix(A.cols, A.rows);
-    for (int i = 0; i < A.cols; i++) {
-        for (int j = 0; j < A.rows; ++j) {
+    for (size_t i = 0; i < A.cols; i++) {
+        for (size_t j = 0; j < A.rows; ++j) {
             T.data[i][j] = A.data[j][i];
         }
     }
@@ -113,8 +113,8 @@ Matrix mat_add(Matrix A, Matrix B) {
         exit(EXIT_FAILURE);
     }
     Matrix M = init_matrix(A.rows, B.cols);
-    for (int i = 0; i < A.rows; i++) {
-        for (int j = 0; j < A.cols; ++j) {
+    for (size_t i = 0; i < A.rows; i++) {
+        for (size_t j = 0; j < A.cols; ++j) {
             M.data[i][j] = A.data[i][j] + B.data[i][j];
         }
     }
@@ -128,8 +128,8 @@ Matrix mat_sub(Matrix A, Matrix B) {
         exit(EXIT_FAILURE);
     }
     Matrix M = init_matrix(A.rows, B.cols);
-    for (int i = 0; i < A.rows; i++) {
-        for (int j = 0; j < A.cols; ++j) {
+    for (size_t i = 0; i < A.rows; i++) {
+        for (size_t j = 0; j < A.cols; ++j) {
             M.data[i][j] = A.data[i][j] - B.data[i][j];
         }
     }
@@ -143,9 +143,9 @@ Matrix mat_mul(Matrix A, Matrix B) {
         exit(EXIT_FAILURE);
     }
     Matrix M = init_matrix(A.rows, B.cols);
-    for (int i = 0; i < A.rows; i++) {
-        for (int j = 0; j < A.cols; ++j) {
-            for(int k = 0; k < B.rows; k++) {
+    for (size_t i = 0; i < A.rows; i++) {
+        for (size_t j = 0; j < A.cols; ++j) {
+            for(size_t k = 0; k < B.rows; k++) {
                 M.data[i][j] += A.data[i][k] * B.data[k][j];
             }
         }
@@ -160,8 +160,8 @@ Matrix mat_dot(Matrix A, Matrix B) {
         exit(EXIT_FAILURE);
     }
     Matrix M = init_matrix(A.rows, B.cols);
-    for (int i = 0; i < A.rows; i++) {
-        for (int j = 0; j < A.cols; ++j) {
+    for (size_t i = 0; i < A.rows; i++) {
+        for (size_t j = 0; j < A.cols; ++j) {
             M.data[i][j] = A.data[i][j] * B.data[i][j];
         }
     }
@@ -171,10 +171,20 @@ Matrix mat_dot(Matrix A, Matrix B) {
 //---------------------- Matrix Power ---------------------//
 Matrix power(Matrix A, double n) {
     Matrix P = init_matrix(A.rows, A.cols);
-    for (int i = 0; i < A.rows; i++) {
-        for (int j = 0; j < A.cols; ++j) {
+    for (size_t i = 0; i < A.rows; i++) {
+        for (size_t j = 0; j < A.cols; ++j) {
             P.data[i][j] = pow(A.data[i][j], n);
         }
     }
     return P;
+}
+
+//---------------------- Matrix Shuffle -------------------//
+Matrix shuffle(Matrix X) {
+    for (size_t i = 0; i < X.rows; i++) {
+        for (size_t j = 0; j < X.cols; ++j) {
+            size_t r = i + rand() / (RAND_MAX / (X.rows - i) + 1);
+
+        }
+    }
 }

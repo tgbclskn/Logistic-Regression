@@ -224,6 +224,33 @@ preprocessing/load.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogisticRegression.dir/build.make CMakeFiles/LogisticRegression.dir/preprocessing/load.c.s
 .PHONY : preprocessing/load.c.s
 
+preprocessing/split.o: preprocessing/split.c.o
+
+.PHONY : preprocessing/split.o
+
+# target to build an object file
+preprocessing/split.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogisticRegression.dir/build.make CMakeFiles/LogisticRegression.dir/preprocessing/split.c.o
+.PHONY : preprocessing/split.c.o
+
+preprocessing/split.i: preprocessing/split.c.i
+
+.PHONY : preprocessing/split.i
+
+# target to preprocess a source file
+preprocessing/split.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogisticRegression.dir/build.make CMakeFiles/LogisticRegression.dir/preprocessing/split.c.i
+.PHONY : preprocessing/split.c.i
+
+preprocessing/split.s: preprocessing/split.c.s
+
+.PHONY : preprocessing/split.s
+
+# target to generate assembly for a file
+preprocessing/split.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LogisticRegression.dir/build.make CMakeFiles/LogisticRegression.dir/preprocessing/split.c.s
+.PHONY : preprocessing/split.c.s
+
 regression/logistic.o: regression/logistic.c.o
 
 .PHONY : regression/logistic.o
@@ -296,6 +323,9 @@ help:
 	@echo "... preprocessing/load.o"
 	@echo "... preprocessing/load.i"
 	@echo "... preprocessing/load.s"
+	@echo "... preprocessing/split.o"
+	@echo "... preprocessing/split.i"
+	@echo "... preprocessing/split.s"
 	@echo "... regression/logistic.o"
 	@echo "... regression/logistic.i"
 	@echo "... regression/logistic.s"
