@@ -4,7 +4,7 @@
 #include "regression/logistic.h"
 
 int main() {
-    Iris IrisDataset = load_iris("../dataset/Iris.csv");
+    Iris IrisDataset = load_iris("./dataset/Iris.csv");
     Matrix X = IrisDataset.X;
     Matrix y = IrisDataset.y;
 
@@ -18,8 +18,9 @@ int main() {
     dispose(X);
     dispose(y);
 
-    LogisticRegression lr = {0.05, 20};
+    LogisticRegression lr = {0.001, 1000000};
     Model trained_model = fit(lr, TrainX, TrainY);
+
     Matrix Y_hat = predict(trained_model, TestX);
     get_accuracy(TestY, Y_hat);
 

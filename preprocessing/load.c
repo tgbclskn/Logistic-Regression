@@ -1,7 +1,7 @@
 #include "load.h"
 
-#define IRIS_TRAINING_EXAMPLES 100
-#define IRIS_FEATURES 4
+#define DATA_ROWS 100
+#define DATA_COLS 5
 
 static Matrix get_x(Matrix dataset) {
     Matrix X = zeros(dataset.rows, dataset.cols - 1);
@@ -30,7 +30,7 @@ Iris load_iris(char *path) {
         exit(EXIT_FAILURE);
     }
 
-    Matrix dataset = zeros(IRIS_TRAINING_EXAMPLES, IRIS_FEATURES + 1);
+    Matrix dataset = zeros(DATA_ROWS, DATA_COLS);
 
     char line[1024];
     size_t i = 0;
